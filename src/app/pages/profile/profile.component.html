@@ -131,13 +131,11 @@
 
             <table class="table">
                 <tr>
-                    <th>Id</th>
                     <th>To</th>
                     <th>Summa</th>
                     <th>Currency</th>
                 </tr>
                 <tr *ngFor="let line of transactionHistory">
-                    <td>{{ line.userId }}</td>
                     <td>{{ line.toUserId }}</td>
                     <td>{{ line.summa }}</td>
                     <td>{{ line.currency }}</td>
