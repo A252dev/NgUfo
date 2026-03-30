@@ -27,14 +27,16 @@
         </div>
         <div class="data__container">
             <h5 class="form__title" i18n>I am 13 years of age or older and agree to the terms of the <a
-                    class="form__link">User Agreement</a> and the <a class="form__link">UFOPay Privacy Policy</a>.</h5>
+                    class="form__link" href="/user_agreement" target="_blank">User Agreement</a> and the <a
+                    class="form__link" href="/privacy_policy" target="_blank">UFOPay Privacy Policy</a>.</h5>
             <input class="checkbox" name="acceptRules" (click)="rulesHandler()" type="checkbox" />
         </div>
         <div class="data__container">
             <h5 class="form__title" i18n>Keep login</h5>
             <input class="checkbox" name="keepLogin" (click)="keepLoginHandler()" type="checkbox" />
         </div>
-        <input class="button" type="button" (click)="onSubmit()" [disabled]="registerForm.invalid" i18n value="Register" />
+        <input class="button" type="button" (click)="onSubmit()" [disabled]="registerForm.invalid" i18n
+            value="Register" />
         <a class="register__button" routerLink="/login" i18n>Have account? Login</a>
     </form>
 </section>
