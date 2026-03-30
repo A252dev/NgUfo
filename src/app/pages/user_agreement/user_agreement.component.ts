@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { ViewportScroller } from "@angular/common";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
     selector: 'user-agreements',
@@ -7,6 +8,11 @@ import { Component } from "@angular/core";
     styleUrl: '../../styles/docs.css'
 })
 
-export class UserAgreements{
+export class UserAgreements implements OnInit {
 
+    constructor(private scroller: ViewportScroller) { }
+
+    ngOnInit(): void {
+        this.scroller.scrollToPosition([0, 0]);
+    }
 }
